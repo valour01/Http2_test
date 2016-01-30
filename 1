@@ -1,0 +1,13 @@
+import socket
+import dns.resolver
+
+# Basic query
+for rdata in dns.resolver.query('e5110.e15.akamaiedge.net', 'CNAME') :
+    print rdata.target
+
+# Set the DNS Server
+'''resolver = dns.resolver.Resolver()
+resolver.nameservers=[socket.gethostbyname('ns1.cisco.com')]
+for rdata in resolver.query('www.asus.com', 'CNAME') :
+    print rdata.target
+'''
